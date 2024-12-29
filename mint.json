@@ -25,19 +25,13 @@
     "name": "Platform Login",
     "url": "https://platform.kentron.ai"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "navigation": [
     {
       "group": "Getting Started",
       "pages": [
         "introduction",
         {
-          "group": "Regulatory",
+          "group": "Regulatory and Confluence",
           "pages": [
             "regulations",
             "regulation/finance-banking",
@@ -49,7 +43,7 @@
           ]
         },
         {
-          "group": "Connectors Overview",
+          "group": "Connectors",
           "pages": [
             "connector",
             "connectors/google-workspace",
@@ -65,13 +59,6 @@
           ]
         },
         "data-classification"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication"
       ]
     }
   ],
