@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Kentron",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/white.svg",
+    "light": "/logo/black.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -17,13 +17,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Contact Us",
+      "url": "mailto:contact@kentron.ai"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Platform Login",
+    "url": "https://platform.kentron.ai"
   },
   "tabs": [
     {
@@ -31,61 +31,52 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Getting Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
-      ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        {
+          "group": "Regulatory",
+          "pages": [
+            "regulations",
+            "regulation/finance-banking",
+            "regulation/cidppr",
+            "regulation/education",
+            "regulation/health",
+            "regulation/finance",
+            "regulation/data-privacy"
+          ]
+        },
+        {
+          "group": "Connectors Overview",
+          "pages": [
+            "connector",
+            "connectors/google-workspace",
+            "connectors/google-vault",
+            "connectors/slack-enterprise",
+            "connectors/jira",
+            "connectors/confluence",
+            "connectors/microsoft-teams",
+            "connectors/microsoft-onedrive",
+            "connectors/zoom",
+            "connectors/outlook",
+            "connectors/gmail"
+          ]
+        },
+        "data-classification"
       ]
     },
     {
       "group": "API Documentation",
       "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/introduction",
+        "api-reference/authentication"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "linkedin": "https://linkedin.com/company/kentron-ai",
+    "github": "https://github.com/kentron"
   }
 }

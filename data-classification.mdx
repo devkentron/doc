@@ -1,0 +1,83 @@
+---
+title: "Data Classification"
+description: "Overview of information types and detectors in Sensitive Data Protection"
+---
+
+# Data Classification
+
+Kentron's best-in-class predictive compliance engine proactively identifies over 150 data types and empowers legal and compliance stakeholders to make informed decisions.
+
+
+## Global
+
+| InfoType                   | Description                                                                                                                                                                                                                 |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ADVERTISING_ID`           | Identifiers used by developers to track users for advertising purposes. These include Google Play Advertising IDs, Amazon Advertising IDs, Apple's identifierForAdvertising (IDFA), and Apple's identifierForVendor (IDFV). |
+| `AGE`                      | An age measured in months or years.                                                                                                                                                                                         |
+| `BLOOD_TYPE`               | A blood type is a classification of blood.                                                                                                                                                                                  |
+| `CREDIT_CARD_NUMBER`       | A credit card number is 12 to 19 digits long. They are used for payment transactions globally.                                                                                                                              |
+| `CREDIT_CARD_TRACK_NUMBER` | A credit card track number is a variable length alphanumeric string. It is used to store key cardholder information.                                                                                                        |
+| `COUNTRY_DEMOGRAPHIC`      | A country when used to reference someone's place of birth, residence, or citizenship.                                                                                                                                       |
+| `DATE`                     | A date. This infoType includes most date formats, including the names of common world holidays.                                                                                                                             |
+| `DATE_OF_BIRTH`            | A date that is identified by context as a date of birth.                                                                                                                                                                    |
+| `DOMAIN_NAME`              | A domain name as defined by the DNS standard.                                                                                                                                                                               |
+| `EMAIL_ADDRESS`            | An email address identifies the mailbox that emails are sent to or from.                                                                                                                                                    |
+| `EMPLOYMENT_STATUS`        | A person's employment status identifies what kind of work they do.                                                                                                                                                          |
+| `ETHNIC_GROUP`             | A person's ethnic group.                                                                                                                                                                                                    |
+| `FINANCIAL_ACCOUNT_NUMBER` | A number referring to a specific financial account.                                                                                                                                                                         |
+| `GENDER`                   | A person's gender identity.                                                                                                                                                                                                 |
+| `GENERIC_ID`               | Alphanumeric and special character strings that may be personally identifying.                                                                                                                                              |
+| `IBAN_CODE`                | An International Bank Account Number (IBAN).                                                                                                                                                                                |
+| `IMMIGRATION_STATUS`       | An immigration status denotes a person's right to be in a country.                                                                                                                                                          |
+| `IP_ADDRESS`               | An Internet Protocol (IP) address (either IPv4 or IPv6).                                                                                                                                                                    |
+| `LOCATION`                 | A physical address or location.                                                                                                                                                                                             |
+| `LOCATION_COORDINATES`     | A specific location as noted by a latitude-longitude pair or an S2 cell ID.                                                                                                                                                 |
+| `MARITAL_STATUS`           | A classification that indicates a person's civil status.                                                                                                                                                                    |
+| `PERSON_NAME`              | A full person name, including first names, middle names or initials, and last names.                                                                                                                                        |
+| `PHONE_NUMBER`             | A telephone number.                                                                                                                                                                                                         |
+| `STREET_ADDRESS`           | A street address.                                                                                                                                                                                                           |
+
+## Technical Identifiers
+
+| InfoType            | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| `HTTP_COOKIE`       | An HTTP cookie for storing data on a per website basis.                |
+| `HTTP_USER_AGENT`   | An HTTP user agent used for facilitating web content.                  |
+| `ICCID_NUMBER`      | An Integrated Circuit Card Identifier (ICCID) for SIM cards.           |
+| `IMEI_HARDWARE_ID`  | An International Mobile Equipment Identity (IMEI) hardware identifier. |
+| `IMSI_ID`           | An International Mobile Subscriber Identity (IMSI) identifier.         |
+| `MAC_ADDRESS`       | A media access control address (MAC address).                          |
+| `MAC_ADDRESS_LOCAL` | A local media access control address.                                  |
+
+## Medical Information
+
+| InfoType                | Description                                                          |
+| ----------------------- | -------------------------------------------------------------------- |
+| `ICD9_CODE`             | International Classification of Diseases, Ninth Revision codes.      |
+| `ICD10_CODE`            | International Classification of Diseases, Tenth Revision codes.      |
+| `MEDICAL_RECORD_NUMBER` | A generic medical record number.                                     |
+| `MEDICAL_TERM`          | Terms that commonly refer to a person's medical condition or health. |
+
+## Business and Organization
+
+| InfoType                        | Description                                            |
+| ------------------------------- | ------------------------------------------------------ |
+| `ORGANIZATION_NAME`             | A name of a chain store, business or organization.     |
+| `SWIFT_CODE`                    | A SWIFT code (Bank Identifier Code).                   |
+| `VAT_NUMBER`                    | A value-added tax identification number.               |
+| `VEHICLE_IDENTIFICATION_NUMBER` | A unique 17-digit vehicle identification number (VIN). |
+
+## Document Types
+
+| InfoType                            | Description                                                                                    |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `DOCUMENT_TYPE/FINANCE/REGULATORY`  | Finance regulatory documents including financial regulations, tax laws, rules, and guidelines. |
+| `DOCUMENT_TYPE/HR/RESUME`           | A résumé or a curriculum vitae (CV) document.                                                  |
+| `DOCUMENT_TYPE/LEGAL/BRIEF`         | A legal brief advocating a particular outcome of a case.                                       |
+| `DOCUMENT_TYPE/R&D/SOURCE_CODE`     | A source code file.                                                                            |
+| `DOCUMENT_TYPE/R&D/SYSTEM_LOG`      | A system or application software log.                                                          |
+| `DOCUMENT_TYPE/R&D/DATABASE_BACKUP` | A database backup file.                                                                        |
+
+<Note>
+This is a subset of the available infoTypes. For the complete and most up-to-date list, please contact our support team.
+</Note>
