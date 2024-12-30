@@ -18,13 +18,9 @@
   "topbarLinks": [
     {
       "name": "Contact Us",
-      "url": "mailto:contact@kentron.ai"
+      "url": "mailto:dev@kentron.ai"
     }
   ],
-  "topbarCtaButton": {
-    "name": "Platform Login",
-    "url": "https://platform.kentron.ai"
-  },
   "navigation": [
     {
       "group": "Getting Started",
@@ -63,7 +59,7 @@
     }
   ],
   "footerSocials": {
-    "linkedin": "https://linkedin.com/company/kentron-ai",
-    "github": "https://github.com/kentron"
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com/devkentron"
   }
 }
