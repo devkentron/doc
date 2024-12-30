@@ -18,25 +18,16 @@
   "topbarLinks": [
     {
       "name": "Contact Us",
-      "url": "mailto:dev@kentron.ai"
+      "url": "mailto:feedback@kentron.ai"
     }
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "KENTRON PLATFORM",
       "pages": [
-        "introduction",
         {
-          "group": "Regulatory and Confluence",
-          "pages": [
-            "regulations",
-            "regulation/finance-banking",
-            "regulation/cidppr",
-            "regulation/education",
-            "regulation/health",
-            "regulation/finance",
-            "regulation/data-privacy"
-          ]
+          "group": "Get Started",
+          "pages": ["introduction"]
         },
         {
           "group": "Connectors",
@@ -54,7 +45,30 @@
             "connectors/gmail"
           ]
         },
+        {
+          "group": "Regulatory and Confluence",
+          "pages": [
+            "regulations",
+            "regulation/finance-banking",
+            "regulation/cidppr",
+            "regulation/education",
+            "regulation/health",
+            "regulation/finance",
+            "regulation/data-privacy"
+          ]
+        },
         "data-classification"
+      ]
+    },
+    {
+      "group": "SUPPORT",
+      "pages": [
+        {
+          "group": "Contact Us",
+          "pages": [
+            "support/contact-us"
+          ]
+        }
       ]
     }
   ],
