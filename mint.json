@@ -27,7 +27,9 @@
       "pages": [
         {
           "group": "Get Started",
-          "pages": ["introduction"]
+          "pages": [
+            "introduction"
+          ]
         },
         {
           "group": "Connectors",
@@ -63,17 +65,12 @@
     {
       "group": "SUPPORT",
       "pages": [
-        {
-          "group": "Contact Us",
-          "pages": [
-            "support/contact-us"
-          ]
-        }
+        "support/contact-us"
       ]
     }
   ],
   "footerSocials": {
-    "linkedin": "https://linkedin.com",
+    "linkedin": " https://www.linkedin.com/company/kentronai",
     "github": "https://github.com/devkentron"
   }
 }
