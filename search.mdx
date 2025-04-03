@@ -1,0 +1,127 @@
+---
+title: 'Boolean Operators'
+description: 'Understanding search operators for refining and optimizing results'
+---
+
+## Introduction
+Boolean operators are used in search queries to refine and optimize results by defining relationships between keywords. This document describes common Boolean search operators and their expected results, particularly in the context of date-based searches.
+
+## Boolean Operators and Examples
+
+<AccordionGroup>
+  <Accordion title="AND">
+    **Definition:** Ensures that results contain all specified terms.
+    
+    **Example:**
+    ```
+    created-on-or-after: >= "2024-01-01" AND modified-on-or-after: "2024-12-31"
+    ```
+    
+    **Expected Result:** Returns records where the creation date is on or after January 1, 2024, and the modification date is on or before December 31, 2024.
+  </Accordion>
+
+  <Accordion title="OR">
+    **Definition:** Expands results to include records that contain at least one of the specified terms.
+    
+    **Example:**
+    ```
+    created_date = "2023-06-01" OR modified_date = "2024-01-01"
+    ```
+    
+    **Expected Result:** Returns records created on June 1, 2023, or modified on January 1, 2024.
+  </Accordion>
+
+  <Accordion title="NOT (or AND NOT)">
+    **Definition:** Excludes results containing the specified term.
+    
+    **Example:**
+    ```
+    created-on-or-after: "2024-01-01" AND NOT modified-on-or-after: "2024-06-01"
+    ```
+    
+    **Expected Result:** Returns records created on or after January 1, 2024, but excludes those modified on or after June 1, 2024.
+  </Accordion>
+
+  <Accordion title='Quotation Marks ("")'>
+    **Definition:** Searches for an exact phrase.
+    
+    **Example:**
+    ```
+    Text contains = "urgent review required"
+    ```
+    
+    **Expected Result:** Returns records where the comment field contains exactly "urgent review required" in that order.
+  </Accordion>
+
+  <Accordion title="Parentheses ()">
+    **Definition:** Groups expressions to enforce precedence.
+    
+    **Example:**
+    ```
+    (created-on-or-after: "2024-01-01" AND created-on-or-before: "2024-06-30") OR (modified-on-or-after: "2024-07-01" AND modified-on-or-before:"2024-12-31")
+    ```
+    
+    **Expected Result:** Returns records created in the first half of 2024 or modified in the second half of 2024.
+  </Accordion>
+
+  <Accordion title="Asterisk (*)">
+    **Definition:** Acts as a wildcard for partial matches.
+    
+    **Example:**
+    ```
+    filename = "report_2024*"
+    ```
+    
+    **Expected Result:** Returns records with filenames starting with "report_2024", such as "report_2024_Q1.pdf" or "report_2024_summary.docx".
+  </Accordion>
+
+  <Accordion title="Proximity Operators">
+    **Definition:** Searches for words within a specified distance of each other.
+    
+    **Example:**
+    ```
+    "audit compliance"~5
+    ```
+    
+    **Expected Result:** Returns records where "audit" and "compliance" appear within five words of each other.
+  </Accordion>
+
+  <Accordion title="XOR">
+    **Definition:** Returns results where only one of the conditions is true, but not both.
+    
+    **Example:**
+    ```
+    created_date = "2024-01-01" XOR modified_date = "2024-01-01"
+    ```
+    
+    **Expected Result:** Returns records created on January 1, 2024, or modified on January 1, 2024, but not both.
+  </Accordion>
+
+  <Accordion title="Caret (^)">
+    **Definition:** Boosts relevance for ranking search results.
+    
+    **Example:**
+    ```
+    comment:"urgent"^5 OR comment:"review"^2
+    ```
+    
+    **Expected Result:** Prioritizes results where "urgent" appears in the comment field over results where "review" appears.
+  </Accordion>
+</AccordionGroup>
+
+## Summary Table of Boolean Operators
+
+| Operator | Definition | Example | Expected Result |
+| --- | --- | --- | --- |
+| AND | Ensures all specified terms appear in results. | `created_date >= "2024-01-01" AND modified_date <= "2024-12-31"` | Returns records where the creation date is on or after January 1, 2024, and the modification date is on or before December 31, 2024. |
+| OR | Expands results to include at least one of the specified terms. | `created_date = "2023-06-01" OR modified_date = "2024-01-01"` | Returns records created on June 1, 2023, or modified on January 1, 2024. |
+| NOT (or AND NOT) | Excludes records containing the specified term. | `created_date >= "2024-01-01" AND NOT modified_date >= "2024-06-01"` | Returns records created on or after January 1, 2024, but excludes those modified on or after June 1, 2024. |
+| Quotation Marks ("") | Searches for an exact phrase. | `comment = "urgent review required"` | Returns records where the comment field contains exactly "urgent review required" in that order. |
+| Parentheses () | Groups expressions to enforce precedence. | `(created_date >= "2024-01-01" AND created_date <= "2024-06-30") OR (modified_date >= "2024-07-01" AND modified_date <= "2024-12-31")` | Returns records created in the first half of 2024 or modified in the second half of 2024. |
+| Asterisk (*) | Acts as a wildcard for partial matches. | `filename = "report_2024*"` | Returns records with filenames starting with "report_2024", such as "report_2024_Q1.pdf" or "report_2024_summary.docx". |
+| Proximity Operators | Searches for words within a specified distance of each other. | `"audit compliance"~5` | Returns records where "audit" and "compliance" appear within five words of each other. |
+| XOR | Returns results where only one of the conditions is true, but not both. | `created_date = "2024-01-01" XOR modified_date = "2024-01-01"` | Returns records created on January 1, 2024, or modified on January 1, 2024, but not both. |
+| Caret (^) | Boosts relevance for ranking search results. | `comment:"urgent"^5 OR comment:"review"^2` | Prioritizes results where "urgent" appears in the comment field over results where "review" appears. |
+
+## Conclusion
+Using Boolean operators effectively enhances search precision, ensuring more relevant results. These operators allow users to refine queries based on dates, keywords, and other metadata for optimal retrieval.
