@@ -1,21 +1,144 @@
+## **Connector Overview**
+
+The Slack connector enables authorized, audit-ready access to Slack Enterprise content for discovery, compliance, and governance. The integration supports full archiving, in-place preservation, identity mapping, and auto-sync modes with robust metadata capture across all supported communication types.
+
 ---
-title: Slack Enterprise
+
+## **Connector Capabilities**
+
+| Feature | Supported |
+| ----- | ----- |
+| Authorized Connection Required | Yes |
+| Identity Mapping | Yes |
+| Audit Logs | Yes |
+| Admin Access Required | Yes |
+| Full Archive Support | Yes |
+| Custodian-Based Collections | Yes |
+| In-Place Preservation | Yes |
+| Resumable Sync | Yes |
+| Preserve in Place with ILH | Yes |
+| Syncs Future Users Automatically | Yes |
+| Sync Modes | One-Time Sync |
+| File Versioning | Yes |
+
 ---
 
-Capture critical data seamlessly from Slack Enterprise Grid. Analyze communications and unlock powerful insights with on-demand data collection.
+## **Data Collection Scope**
 
-Kentron's Unified Injection Engine supports collecting the following data:
+### **Supported Content Types**
 
-- Workspace specific data 
-- Channel specified data 
-- User(s) specific data 
-- Private channels 
-- Public channels 
-- Direct messages
-- Groups messages 
-- Edited messages 
-- Deleted messages 
-- Emojis
-- Images 
-- Links 
-- GIFs
+* **Messages**
+
+  * Public and private channel messages
+
+  * Direct messages (DMs)
+
+  * Multi-person instant messages (MPIMs)
+
+  * Edited and deleted messages (if *Keep Everything* is enabled)
+
+* **Files & Media**
+
+  * Files posted in channels, DMs, and MPIMs
+
+  * Snippets and posts
+
+  * GIFs
+
+  * Slack-recorded audio and video clips
+
+* **Reactions**
+
+  * Slack and custom emoji reactions (initial sync only)
+
+* **Slack Huddles**
+
+  * Default message and timestamp
+
+  * Threaded conversations during the Huddle
+
+  * Huddle metadata: room ID, participants, status flags (missed/accepted/rejected)
+
+* **Slack Canvas**
+
+  * Shared and unshared canvases
+
+  * Text, links, images
+
+  * Canvas-specific metadata
+
+* **Slack Lists**
+
+  * Captured as CSV
+
+---
+
+## **Metadata Collected**
+
+### **Workspace Metadata**
+
+* `workspace_id`
+
+* `workspace_name`
+
+### **Conversation Metadata**
+
+* `conversation_id`
+
+* `conversation_name` (channel, group, DM)
+
+* `conversation_type` (e.g., channel, private group, DM)
+
+### **Message Metadata**
+
+* `message_id`
+
+* `author`
+
+* `reactions`
+
+* **Huddle-specific**
+
+  * `room_created_by`
+
+  * `room_start_date`, `room_end_date`
+
+  * `room_participant_history`
+
+  * `permalink` (call URL)
+
+  * `room_id`
+
+  * `was_rejected`, `was_missed`, `was_accepted`
+
+---
+
+## **Usage Recommendations**
+
+### **For eDiscovery and Compliance Teams**
+
+* Enable *Keep Everything* in Slack Enterprise settings to ensure capture of edited and deleted messages.
+
+* Use **auto-sync mode** for continuous ingestion and future-proof coverage of new users or channels.
+
+* Leverage **custodian-based collections** for targeted investigations or regulatory holds.
+
+* Utilize **in-place preservation** with ILH to maintain defensible data integrity without immediate exports.
+
+### **For Admins**
+
+* Ensure required permissions and OAuth scopes are granted.
+
+* Configure retention policies aligned with regulatory requirements (e.g., SEC 17a-4, FINRA).
+
+---
+
+## **Integration Best Practices**
+
+* Regularly audit connection health and sync status using available logs.
+
+* Map Slack user identities to corporate identity management systems to unify cross-platform searches.
+
+* Monitor and manage file versioning in high-collaboration environments where documents are frequently edited.
+
+* Validate huddle and canvas metadata integrity if used as part of case evidence.
