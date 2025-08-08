@@ -44,7 +44,8 @@
             "connectors/microsoft-onedrive",
             "connectors/zoom",
             "connectors/outlook",
-            "connectors/gmail"
+            "connectors/gmail",
+            "connectors/box"
           ]
         },
         {
