@@ -27,48 +27,13 @@
       "pages": [
         {
           "group": "Get Started",
-          "pages": [
-            "introduction"
-          ]
-        },
-        {
-          "group": "Connectors",
-          "pages": [
-            "connector",
-            "connectors/google-workspace",
-            "connectors/google-vault",
-            "connectors/slack-enterprise",
-            "connectors/jira",
-            "connectors/confluence",
-            "connectors/microsoft-teams",
-            "connectors/microsoft-onedrive",
-            "connectors/zoom",
-            "connectors/outlook",
-            "connectors/gmail",
-            "connectors/box"
-          ]
-        },
-        {
-          "group": "Regulatory and Compliance",
-          "pages": [
-            "regulations",
-            "regulation/finance-banking",
-            "regulation/cidppr",
-            "regulation/education",
-            "regulation/health",
-            "regulation/finance",
-            "regulation/data-privacy"
-          ]
-        },
-        "data-classification",
-        "search"
+          "pages": ["introduction", "user-guide"]
+        }
       ]
     },
     {
       "group": "SUPPORT",
-      "pages": [
-        "support/contact-us"
-      ]
+      "pages": ["support/contact-us"]
     }
   ],
   "footerSocials": {
